@@ -1,0 +1,9 @@
+hack_upload.form:
+  path: '/hack-upload-form'
+  options:
+    _auth: [ 'http_basic' ]
+  defaults:
+    _title: 'This is bad form...'
+    _form: 'Drupal\hack_upload\Form\HackUploadForm'
+  requirements:
+    _permission: 'access content'

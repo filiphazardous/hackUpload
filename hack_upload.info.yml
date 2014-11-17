@@ -1,0 +1,4 @@
+name: Drupal 8 File upload hack
+description: Drupal 8 - temporary file upload hack, will EOL when REST file intity can post
+type: module
+core: 8.x
