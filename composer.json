@@ -1,0 +1,19 @@
+{
+    "name": "drupal/hack-upload",
+    "description": "hackUpload is a workaround to upload binaries in a webapp context",
+    "type": "drupal-module",
+    "homepage": "https://github.com/filiphazardous/hackUpload",
+    "authors": [
+        {
+            "name": "Filip Joelsson (filiphazardous)",
+            "homepage": "https://pixiecoder.com",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/filiphazardous/hackUpload/issues",
+        "source": "https://github.com/filiphazardous/hackUpload"
+    },
+    "license": "GPL-2.0+"
+}
+
