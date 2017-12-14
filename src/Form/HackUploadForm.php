@@ -44,7 +44,7 @@ class HackUploadForm extends FormBase {
     #$this->_grep_to_log($str, $data, 3, 10);
 
     $file = NULL;
-    $ret = file_save_upload('new_file', array(), 'public://field/proof/');
+    $ret = file_save_upload('new_file', array(), 'public://field/files/');
     #$ret = file_save_upload('new_file', array('file_validate_extensions'=>array(0=>'jpeg jpg gif png')), 'public://field/proof/');
     if (is_array($ret) && is_object($ret[0])) {
       $file = $ret[0];
@@ -75,9 +75,11 @@ class HackUploadForm extends FormBase {
     $file->save();
     $uuid = $file->uuid();
     $uri = $file->destination;
+    $fid = $file->id();
 
-    $json = '{ "uri" : "'. $uri .'", "uuid" : "'. $uuid .'"}';
-    print $json;
+    $return_data = \Drupal::service('serializer')->serialize($file, 'json');
+
+    print json_encode($return_data);
     exit;
   }
 
